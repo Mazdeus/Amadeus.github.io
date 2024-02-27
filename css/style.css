@@ -1,0 +1,207 @@
+.map-container {
+  display: flex;
+  justify-content: center; /* Menengahkan peta */
+}
+
+.video-container {
+  width: 100%; /* Lebar video container */
+  display: flex;
+  justify-content: center; /* Menengahkan video */
+}
+
+.video-container video {
+  max-width: 400px; /* Atur lebar maksimum video */
+  width: 100%; /* Menyesuaikan lebar video dengan lebar container */
+  height: auto; /* Menyesuaikan tinggi video secara proporsional */
+}
+
+.gallery img {
+  max-width: 500px; /* Atur lebar maksimum gambar */
+  height: auto; /* Atur tinggi otomatis agar aspek rasio tetap terjaga */
+  margin: 5px; /* Berikan jarak antara gambar */
+}
+
+.gallery-menu {
+  margin-left: auto; /* Menggeser menu galeri ke kanan */
+}
+
+.gallery-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.gallery-menu ul li {
+  margin-left: 20px;
+}
+
+.gallery-menu ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.gallery-menu ul li a:hover {
+  background-color: #282379;
+}
+
+.new-nav {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+
+.new-nav li {
+  margin-left: 20px;
+}
+
+.new-nav li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.new-nav li a:hover {
+  color: #282379;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.skill img {
+  width: 50px; /* Atur ukuran gambar kecil */
+  margin-right: 10px; /* Beri jarak antara gambar dan teks */
+}
+
+.hobby-images img:hover::after {
+  content: attr(title);
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.hobby-images {
+  display: flex;
+}
+
+.hobby-images img {
+  flex: 1; /* Membuat gambar memenuhi ruang yang tersedia */
+  max-width: 30%; /* Memastikan gambar tidak melebihi lebar container */
+  height: auto; /* Memastikan aspek rasio gambar tetap terjaga */
+  margin: 0 5px; /* Memberikan jarak antara gambar */
+}
+
+.identity {
+  display: grid;
+  grid-template-columns: 150px auto; /* Lebar kolom pertama adalah 150px, sisa lebar akan diisi oleh kolom kedua */
+  row-gap: 10px; /* Jarak antar baris */
+}
+
+.identity div {
+  padding: 5px;
+}
+
+.flexone {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Ini akan memposisikan konten di tengah secara vertikal */
+  text-align: center; /* Ini akan memposisikan teks secara horizontal di tengah */
+}
+
+.flexone h5 {
+  margin-top: 10px; /* Jarak antara teks dan gambar */
+}
+
+.image {
+  display: block;
+  margin: 0 auto; /* Ini akan membuat gambar berada di tengah */
+  max-width: 50%; /* Mengatur maksimum lebar gambar menjadi 50% dari lebar container */
+  height: auto; /* Untuk memastikan aspek rasio gambar tetap terjaga */
+  border-radius: 10px; /* Memberikan kelekukan pada sudut gambar */
+}
+
+.small-image {
+  width: 250px; /* Atur lebar gambar kecil */
+  height: auto; /* Tetapkan tinggi gambar sesuai dengan aspek rasio */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: #375980;
+  color: #fff;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px; /* Ukuran font */
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+  margin-left: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  margin-left: 10px; /* Jarak antar menu */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 10px; /* Padding pada menu */
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  background-color: #282379;
+}
+
+.content {
+  padding: 20px;
+}
+
+.box {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #333;
+}
+
+p {
+  color: #666;
+}
