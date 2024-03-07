@@ -77,6 +77,9 @@ nav ul li a:hover {
 h2 {
   color: #333;
 }
+.box h2 {
+  margin-bottom: 15px; /* Tambahkan margin-bottom di sini */
+}
 
 p {
   color: #666;
@@ -220,6 +223,7 @@ p {
   max-width: 30%;
   height: auto;
   margin: 0 5px;
+  transition: transform 0.3s ease;
 }
 
 /* Identity Section Styling */
