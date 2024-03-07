@@ -8,19 +8,26 @@
 /* Font */
 body {
   font-family: Arial, sans-serif;
+  background-image: url('../img/Wallpaper.jpg'); /* Menambahkan gambar latar belakang */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Menetapkan gambar latar belakang agar tetap saat di-scroll */
+  padding-top: 80px;
 }
 
 /* Header */
 header {
   background-color: #375980;
   color: #fff;
-  padding: 10px 20px;
+  padding: 20px 0; /* Menambahkan padding atas dan bawah */
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 1000;
+  height: 80px; /* Menambahkan tinggi header */
 }
 
 .logo h4 {
@@ -80,7 +87,6 @@ nav ul li a:hover {
 h2 {
   color: #333;
 }
-
 
 p {
   color: #666;
