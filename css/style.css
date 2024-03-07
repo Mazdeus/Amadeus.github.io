@@ -18,6 +18,9 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .logo h4 {
@@ -77,9 +80,7 @@ nav ul li a:hover {
 h2 {
   color: #333;
 }
-.box h2 {
-  margin-bottom: 15px; /* Tambahkan margin-bottom di sini */
-}
+
 
 p {
   color: #666;
@@ -261,3 +262,4 @@ p {
 .hobby-images img:hover {
   transform: scale(1.1);
 }
+
