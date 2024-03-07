@@ -249,3 +249,11 @@ p {
   align-items: center;
   text-align: center;
 }
+
+.hobby-images img {
+  transition: transform 0.3s ease;
+}
+
+.hobby-images img:hover {
+  transform: scale(1.1);
+}
