@@ -8,10 +8,6 @@
 /* Font */
 body {
   font-family: Arial, sans-serif;
-  background-image: url('../img/Wallpaper.jpg'); /* Menambahkan gambar latar belakang */
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed; /* Menetapkan gambar latar belakang agar tetap saat di-scroll */
   padding-top: 80px;
 }
 
