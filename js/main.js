@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+
 let lastScrollTop = 0;
 const header = document.querySelector('header');
 
