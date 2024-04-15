@@ -3,6 +3,7 @@ import datetime
 import requests
 from bs4 import BeautifulSoup
 import json
+import os
 
 #Request ke website
 page = requests.get('https://www.republika.co.id/')
@@ -39,7 +40,9 @@ for headline in headlines:
             # Menambahkan sebuah dictionary yang berisi judul artikel, kategori, waktu publikasi, dan waktu scraping ke dalam list data.
             data.append({"judul": title.text.strip(), "kategori": kategori, "publish_time": waktu, "scraping_time": scraping_time})
     
-# menulis data ke dalam sebuah file dengan format JSON
-with open('D:\\headline.json', 'w') as f:
-    json.dump(data, f, indent=4) #data adalah sebuah list yang berisi dictionary-dictionary yang telah kita kumpulkan dari proses scraping sebelumnya. f adalah objek file tempat kita akan menulis data JSON. Sedangkan, indent=4 adalah Parameter yang memberi tahu fungsi json.dump untuk memberi indentasi sebanyak 4 spasi pada setiap tingkat dalam data JSON. Ini membuat struktur JSON menjadi lebih mudah dibaca ketika dibuka dengan editor teks.
-    
+# Mendapatkan jalur ke direktori saat ini
+current_dir = os.path.dirname(os.path.realpath(__file__))
+
+# menulis data ke dalam sebuah file dengan format JSON di direktori yang sama dengan file Python
+with open(os.path.join(current_dir, 'headline.json'), 'w') as f:
+    json.dump(data, f, indent=4)
