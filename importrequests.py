@@ -4,6 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 import json
 import os
+import subprocess
 
 #Request ke website
 page = requests.get('https://www.republika.co.id/')
@@ -46,3 +47,20 @@ current_dir = os.path.dirname(os.path.realpath(__file__))
 # menulis data ke dalam sebuah file dengan format JSON di direktori yang sama dengan file Python
 with open(os.path.join(current_dir, 'headline.json'), 'w') as f:
     json.dump(data, f, indent=4)
+
+# Mendefinisikan fungsi untuk melakukan commit dan push perubahan ke GitHub
+def commit_and_push_changes():
+    try:
+        # Perintah Git untuk menambahkan semua perubahan
+        subprocess.run(["git", "add", "."], check=True)
+        # Perintah Git untuk melakukan commit dengan pesan "Update data"
+        subprocess.run(["git", "commit", "-m", "Update data"], check=True)
+        # Perintah Git untuk melakukan push ke branch saat ini
+        subprocess.run(["git", "push"], check=True)
+        print("Perubahan berhasil di-commit dan di-push ke GitHub")
+    except subprocess.CalledProcessError as e:
+        # Menangani kesalahan jika terjadi
+        print("Terjadi kesalahan saat melakukan commit dan push perubahan:", e)
+
+# Memanggil fungsi commit_and_push_changes setelah menulis data ke file JSON
+commit_and_push_changes()
