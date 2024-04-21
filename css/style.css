@@ -28,6 +28,7 @@ header {
 
 .logo h4 {
   margin: 0;
+  margin-left: 40px;
 }
 
 .menu-toggle {
@@ -44,6 +45,10 @@ header {
 }
 
 /* Navigation */
+nav {
+  margin-right: 40px; /* Menambahkan margin kiri */
+}
+
 nav ul {
   list-style-type: none;
   display: flex;
@@ -263,4 +268,41 @@ p {
 
 .hobby-images img:hover {
   transform: scale(1.1);
+}
+
+/* Tampilan Tabel */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Header Tabel */
+thead {
+  background-color: #375980;
+  color: #fff;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+/* Warna Baris Bergantian */
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Hover Efek */
+tbody tr:hover {
+  background-color: #ddd;
+}
+
+/* Penyesuaian untuk Seluler */
+@media screen and (max-width: 768px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
 }
